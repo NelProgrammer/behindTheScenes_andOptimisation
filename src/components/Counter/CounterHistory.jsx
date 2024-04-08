@@ -2,23 +2,23 @@ import { useState } from 'react';
 
 import { log } from '../../log.js';
 
-function HistoryItem({ count }) {
+const HistoryItem = ({ count }) => {
   log('<HistoryItem /> rendered', 3);
 
   const [selected, setSelected] = useState(false);
 
-  function handleClick() {
+  const handleClick = () => {
     setSelected((prevSelected) => !prevSelected);
-  }
+  };
 
   return (
     <li onClick={handleClick} className={selected ? 'selected' : undefined}>
       {count}
     </li>
   );
-}
+};
 
-export default function CounterHistory({ history }) {
+const CounterHistory = ({ history }) => {
   log('<CounterHistory /> rendered', 2);
 
   return (
@@ -28,4 +28,6 @@ export default function CounterHistory({ history }) {
       ))}
     </ol>
   );
-}
+};
+
+export default CounterHistory;

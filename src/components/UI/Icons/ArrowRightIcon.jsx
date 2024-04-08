@@ -1,6 +1,6 @@
 import { log } from '../../../log.js';
 
-export default function ArrowRightIcon(props) {
+const ArrowRightIcon = (props) => {
   log('<ArrowRightIcon /> rendered', 3);
 
   return (
@@ -19,4 +19,6 @@ export default function ArrowRightIcon(props) {
       />
     </svg>
   );
-}
+};
+
+export default ArrowRightIcon;

@@ -6,12 +6,8 @@ import PlusIcon from '../UI/Icons/PlusIcon.jsx';
 import CounterOutput from './CounterOutput.jsx';
 import { log } from '../../log.js';
 
-function isPrime(number) {
-  log(
-    'Calculating if is prime number',
-    2,
-    'other'
-  );
+const isPrime = (number) => {
+  log('Calculating if is prime number', 2, 'other');
   if (number <= 1) {
     return false;
   }
@@ -25,21 +21,21 @@ function isPrime(number) {
   }
 
   return true;
-}
+};
 
-export default function Counter({ initialCount }) {
+const Counter = ({ initialCount }) => {
   log('<Counter /> rendered', 1);
   const initialCountIsPrime = isPrime(initialCount);
 
   const [counter, setCounter] = useState(initialCount);
 
-  function handleDecrement() {
+  const handleDecrement = () => {
     setCounter((prevCounter) => prevCounter - 1);
-  }
+  };
 
-  function handleIncrement() {
+  const handleIncrement = () => {
     setCounter((prevCounter) => prevCounter + 1);
-  }
+  };
 
   return (
     <section className="counter">
@@ -58,4 +54,6 @@ export default function Counter({ initialCount }) {
       </p>
     </section>
   );
-}
+};
+
+export default Counter;

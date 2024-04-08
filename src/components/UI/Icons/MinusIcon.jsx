@@ -1,6 +1,6 @@
 import { log } from '../../../log.js';
 
-export default function MinusIcon(props) {
+const MinusIcon = (props) => {
   log('<MinusIcon /> rendered', 3);
 
   return (
@@ -15,4 +15,6 @@ export default function MinusIcon(props) {
       <path strokeLinecap="round" strokeLinejoin="round" d="M18 12H6" />
     </svg>
   );
-}
+};
+
+export default MinusIcon;

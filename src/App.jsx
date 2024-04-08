@@ -4,20 +4,20 @@ import Counter from './components/Counter/Counter.jsx';
 import Header from './components/Header.jsx';
 import { log } from './log.js';
 
-function App() {
+const App = () => {
   log('<App /> rendered');
 
   const [enteredNumber, setEnteredNumber] = useState(0);
   const [chosenCount, setChosenCount] = useState(0);
 
-  function handleChange(event) {
+  const handleChange = (event) => {
     setEnteredNumber(+event.target.value);
-  }
+  };
 
-  function handleSetClick() {
+  const handleSetClick = () => {
     setChosenCount(enteredNumber);
     setEnteredNumber(0);
-  }
+  };
 
   return (
     <>
@@ -32,6 +32,6 @@ function App() {
       </main>
     </>
   );
-}
+};
 
 export default App;
