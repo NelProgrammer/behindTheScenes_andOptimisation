@@ -1,4 +1,4 @@
-const log = (message, level = 0, type = 'component') => {
+export const log = (message, level = 0, type = 'component') => {
   let styling = 'padding: 0.15rem; background: #04406b; color: #fcfabd';
 
   if (type === 'other') {
@@ -9,5 +9,3 @@ const log = (message, level = 0, type = 'component') => {
 
   console.log('%c' + indent + message, styling);
 };
-
-export default log;
